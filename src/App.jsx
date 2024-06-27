@@ -8,11 +8,12 @@ import ContentSearchPage from './PagesComponents/ContentSearchPage';
 
 const App = () => {
   return (
+    <ContentMainPage />,
     <Router>
       <Routes>
-        <Route path="/" exact Component={ContentMainPage} />
-        <Route path="/movies" exact Component={CardMovie} />
-        <Route path="/search" exact Component={ContentSearchPage} />
+        <Route path="/Home" Component={ContentMainPage} />
+        <Route path="/movies" Component={CardMovie} />
+        <Route path="/search" Component={ContentSearchPage} />
       </Routes>
     </Router>
   );
