@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from '../api/axiosInstance';
+import axiosInstance from './axiosInstance';
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);

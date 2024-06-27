@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from '../api/axiosInstance';
+import axiosInstance from '../APIcomponents/axiosInstance';
 
 const PeopleList = () => {
   const [people, setPeople] = useState([]);

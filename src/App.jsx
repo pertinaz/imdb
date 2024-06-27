@@ -1,20 +1,19 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MovieList from './components/MovieList';
-import MovieDetail from './components/MovieDetail';
-import Home from './components/home';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import ContentMainPage from './PagesComponents/ContentMainPage';
+import CardMovie from './PagesComponents/CardMovie';
+import MovieDetails from './PagesComponents/ContentDetails';
+import ContentSearchPage from './PagesComponents/ContentSearchPage';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/movies" exact component={MovieList} />
-          <Route path="/movies/:id" component={MovieDetail} />
-        </Switch>
-      </div>
+      <Routes>
+        <Route path="/" exact Component={ContentMainPage} />
+        <Route path="/movies" exact Component={CardMovie} />
+        <Route path="/search" exact Component={ContentSearchPage} />
+      </Routes>
     </Router>
   );
 };
