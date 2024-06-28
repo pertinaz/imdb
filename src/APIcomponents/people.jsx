@@ -10,6 +10,13 @@ const PeopleList = () => {
       try {
         const response = await axiosInstance.get('/person/popular');
         setPeople(response.data.results);
+
+        const transformedPeople = response.data.results.map(person =>({
+          ...person,
+          name: person.name.replace(/ /g,'-').toLowerCase()
+        }));
+
+        setPeople(transformedPeople);
       } catch (error) {
         console.error('Error fetching celebrity:', error);
       }
@@ -24,7 +31,7 @@ const PeopleList = () => {
       <ul>
         {people.map(person => (
           <li key={person.id}>
-            <Link to={`${person.id}`}>{person.name}</Link>
+            <Link to={`person/${person.id}-${person.name}`}>{person.name.replace(/-/,' ')}</Link>
           </li>
         ))}
       </ul>

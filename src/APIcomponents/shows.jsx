@@ -11,6 +11,13 @@ const ShowsList = () => {
       try {
         const response = await axiosInstance.get('/tv/popular');
         setShows(response.data.results);
+
+        const transformedTVShows = response.data.results.map(show =>({
+          ...show,
+          name: show.name.replace(/ /g,'-').toLowerCase()
+        }));
+
+        setShows(transformedTVShows);
       } catch (error) {
         console.error('Error fetching tv show:', error);
       }
@@ -23,9 +30,9 @@ const ShowsList = () => {
     <div>
       <h2>Popular TV Shows</h2>
       <ul>
-        {shows.map(tv => (
-          <li key={tv.id}>
-            <Link to={`/tv/${tv.id}`}>{tv.title}</Link>
+        {shows.map(show => (
+          <li key={show.id}>
+            <Link to={`/tv/${show.id}-${show.name}`}>{show.name.replace(/-/g,' ')}</Link>
           </li>
         ))}
       </ul>

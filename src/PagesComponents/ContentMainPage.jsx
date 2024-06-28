@@ -7,10 +7,12 @@ import Home from "../APIcomponents/home";
 
 function ContentMainPage() {
   return ( 
+    <div>
         <Home />,       
         <MovieList />,
         <ShowsList />,
         <PeopleList />
+    </div>
   );
 }
 

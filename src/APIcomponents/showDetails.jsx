@@ -10,7 +10,7 @@ const ShowDetail = () => {
   useEffect(() => {
     const fetchShowDetail = async () => {
       try {
-        const response = await axiosInstance.get(`/tv/${id}`);
+        const response = await axiosInstance.get(`/show/${id}`);
         setShow(response.data);
       } catch (error) {
         console.error(`Error fetching movie details for id ${id}:`, error);
@@ -20,16 +20,16 @@ const ShowDetail = () => {
     fetchShowDetail();
   }, [id]);
 
-  if (!tv) {
+  if (!show) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h2>{tv.title}</h2>
-      <p>Rating: {tv.vote_average}</p>
-      <p>Release Date: {tv.release_date}</p>
-      <p>Overview: {tv.overview}</p>
+      <h2>{show.title}</h2>
+      <p>Rating: {show.vote_average}</p>
+      <p>Release Date: {show.release_date}</p>
+      <p>Overview: {show.overview}</p>
     </div>
   );
 };
