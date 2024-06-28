@@ -1,17 +1,12 @@
 import React from "react";
-function CardMovie(props) {
+import { Router } from "react-router-dom";
+import PersonDetail from "../APIcomponents/movieDetails";
+import MovieList from "../APIcomponents/Movies";
+function CardMovie() {
     return (
-        <div className='card-movie'>
-            <img src={popeye} alt={props.title} className='img-movie'/>
-            <div className='info-movie'>
-                <div className='rating'>
-                    <p>{props.rating}</p>
-                    <img className='star-rating' src={star} alt='star' />
-                </div>
-                <h3>{props.title}</h3>
-                <div className='button-watch-movie'>Watch movie</div>
-            </div>
-        </div>
+    <Router>
+        <MovieList />
+    </Router>
     );
 }
 

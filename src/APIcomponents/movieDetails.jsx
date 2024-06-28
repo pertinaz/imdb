@@ -1,10 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axiosInstance from './axiosInstance';
+import axiosInstance from './AxiosInstance';
 
 const MovieDetail = () => {
-  const { id } = useParams();
+  const { id, name } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {

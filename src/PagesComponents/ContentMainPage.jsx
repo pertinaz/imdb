@@ -1,17 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import MovieList from "../APIcomponents/movies";
-import ShowsList from "../APIcomponents/shows";
-import PeopleList from "../APIcomponents/people";
-import Home from "../APIcomponents/home";
+import { Link } from 'react-router-dom';
+import MovieList from "../APIcomponents/Movies";
+import ShowsList from "../APIcomponents/Shows";
+import PeopleList from "../APIcomponents/People";
+import Home from "../APIcomponents/Home";
+
 
 function ContentMainPage() {
   return ( 
     <div>
-        <Home />,       
-        <MovieList />,
-        <ShowsList />,
-        <PeopleList />
+        <Home />,
+        <Link to="/movies/popular">Ver películas populares</Link>
+        <ShowsList />
+        <Link to="/movies/popular"><PeopleList /></Link>
     </div>
   );
 }

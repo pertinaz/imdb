@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from '../APIcomponents/axiosInstance';
+import axiosInstance from './AxiosInstance';
 
 const ShowsList = () => {
   const [shows, setShows] = useState([]);

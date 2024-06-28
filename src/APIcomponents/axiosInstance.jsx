@@ -8,8 +8,8 @@ const axiosInstance = axios.create({
   },
   params: {
     api_key: `4b0aabec7a209be9933515861dce9fa1`,
-    language: 'es-CO',
-    pages: 10
+    language: 'es-CO en-EN',
+    results: 5
   }
 });
 

@@ -1,5 +1,5 @@
-import ShowDetail from '../APIcomponents/showDetails';
-import MovieDetail from '../APIcomponents/movieDetails';
+import ShowDetail from '../APIcomponents/ShowDetails';
+import MovieDetail from '../APIcomponents/MovieDetails';
 
 
 function ContentDetails() {
