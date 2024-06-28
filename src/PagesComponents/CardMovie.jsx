@@ -4,9 +4,10 @@ import PersonDetail from "../APIcomponents/movieDetails";
 import MovieList from "../APIcomponents/Movies";
 function CardMovie() {
     return (
-    <Router>
+    <div>
+        <h1>Peliculas populares</h1>
         <MovieList />
-    </Router>
+    </div>
     );
 }
 

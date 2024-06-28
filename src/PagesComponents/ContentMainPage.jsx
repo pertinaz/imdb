@@ -9,10 +9,7 @@ import Home from "../APIcomponents/Home";
 function ContentMainPage() {
   return ( 
     <div>
-        <Home />,
-        <Link to="/movies/popular">Ver películas populares</Link>
-        <ShowsList />
-        <Link to="/movies/popular"><PeopleList /></Link>
+        <Home />
     </div>
   );
 }

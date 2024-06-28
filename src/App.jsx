@@ -9,6 +9,7 @@ import Home from './APIcomponents/Home';
 import ContentDetails from '../src/PagesComponents/ContentDetails';
 import SearchBar from './PagesComponents/SearchBar';
 import MovieList from './APIcomponents/Movies';
+import ShowList from './APIcomponents/Shows';
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <ContentMainPage />
       <Routes>
         <Route path="/movies/popular" component={CardMovie} />
+        <Route path="/tv/popular" component={ShowList} />
+        <Route path="/person/popular" component={PeopleList} />
       </Routes>
     </Router>
   );
