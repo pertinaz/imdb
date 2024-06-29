@@ -1,0 +1,25 @@
+div.search-bar {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  margin: 10px;
+}
+
+button.search-icon {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}

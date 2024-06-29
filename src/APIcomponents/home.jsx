@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import "../StyleComponents/tailwind.css";
+import "../StyleComponents/home.css";
 const Home = () => {
   return (
-    <div className="bg-slate-500">
-      <div className=" bg-slate-400 px-6 shadow">
+    <div className="home">
+      <div className="main-container">
         <h1>IMDB</h1>
         <p>Bienvenido a la mejor base de datos de reseñas de la zona</p>
       </div>
