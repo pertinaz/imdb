@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+}
+
+.home{
+    text-align: center;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    margin: 15px;
+}
+
+.main-container{
+    width: 100vw;
+    height: 250px;
+    background-color: whitesmoke;
+    color: black;
+}

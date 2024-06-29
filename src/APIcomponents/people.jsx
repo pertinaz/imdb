@@ -24,7 +24,7 @@ const PeopleList = () => {
       <ul>
         {people.map(person => (
           <li key={person.id}>
-            <Link to={`person/${person.id}`}>{person.name}</Link>
+            <Link to={`/person/${person.id}`}>{person.name}</Link>
           </li>
         ))}
       </ul>

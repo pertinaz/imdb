@@ -1,6 +1,5 @@
 import PeopleList from '../APIcomponents/People';
 
-
 function CardPeople() {
     return (
         <div>

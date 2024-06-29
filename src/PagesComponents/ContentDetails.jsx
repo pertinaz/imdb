@@ -5,7 +5,7 @@ import MovieDetail from '../APIcomponents/MovieDetails';
 function ContentDetails() {
   return (
     <div>
-      <ShowDetail />,
+      <ShowDetail />
       <MovieDetail />
     </div>
 
