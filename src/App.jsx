@@ -2,10 +2,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ContentMainPage from './PagesComponents/ContentMainPage';
 import CardMovie from './PagesComponents/CardMovie';
+import CardShow from './PagesComponents/CardShow'
 import SearchBar from './PagesComponents/SearchBar';
-import ShowList from './APIcomponents/Shows';
-import PeopleList from './APIcomponents/People';
+import CardPeople from './PagesComponents/CardPeople';
 import PersonDetail from './APIcomponents/PersonDetails';
+
  
 const App = () => {
   return (
@@ -14,8 +15,8 @@ const App = () => {
         <ContentMainPage />
       <Routes>
         <Route path="/movies/popular" element={<CardMovie/>} />
-        <Route path="/tv/popular" element={<ShowList/>} />
-        <Route path="/person/popular" element={<PeopleList />} />
+        <Route path="/tv/popular" element={<CardShow />} />
+        <Route path="/person/popular" element={<CardPeople />} />
         <Route path='/person/:id' element={<PersonDetail/>}/>
       </Routes>
     </Router>

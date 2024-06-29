@@ -1,9 +1,11 @@
-import PersonDetail from "../APIcomponents/PersonDetails";
+import PeopleList from '../APIcomponents/People';
+
 
 function CardPeople() {
     return (
-        <div className='card-people'>
-            <PersonDetail />
+        <div>
+            <h1>Popular celebrities</h1>
+            <PeopleList />
         </div>
     );
 }
