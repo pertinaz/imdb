@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const Home = () => {
   return (
@@ -7,7 +6,7 @@ const Home = () => {
       <p>Bienvenido a la mejor base de datos de reseñas de la zona</p>
       <Link to="/movies/popular">Ver películas populares</Link> 
       <Link to="/tv/popular">Ver TV Shows populares</Link>
-      <Link to="people/popular/">Ver personalidades populares</Link>
+      <Link to="/people/popular">Ver personalidades populares</Link>
     </div>
   );
 };

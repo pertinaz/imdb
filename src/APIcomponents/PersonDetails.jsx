@@ -1,10 +1,10 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axiosInstance from './AxiosInstance';
 
 const PersonDetail = () => {
-  const { id, name } = useParams();
+  const { id } = useParams();
   const [person, setPerson] = useState(null);
 
   useEffect(() => {

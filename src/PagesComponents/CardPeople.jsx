@@ -1,13 +1,9 @@
-import React from "react";
-import star from '../assets/star.png'
-import popeye from '../assets/popeye.jpeg'
-import '../css/CardPeople.css'
+import PersonDetail from "../APIcomponents/PersonDetails";
 
-function CardPeople(props) {
+function CardPeople() {
     return (
         <div className='card-people'>
-            <img src={popeye} alt={props.title} className='img-celebritie' />
-            <h2 className="name-celebritie">{props.nameCelebritie}</h2>
+            <PersonDetail />
         </div>
     );
 }
