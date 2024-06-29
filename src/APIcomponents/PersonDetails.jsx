@@ -26,6 +26,7 @@ const PersonDetail = () => {
 
   return (
     <div>
+      <img src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`} alt={person.name} />
       <h2>{person.name}</h2>
       <p>Gender: {person.gender}</p>
       <p>Birthday: {person.birthday}</p>

@@ -24,6 +24,7 @@ const PeopleList = () => {
       <ul>
         {people.map(person => (
           <li key={person.id}>
+            <img src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`} alt={person.name} />
             <Link to={`/person/${person.id}`}>{person.name}</Link>
           </li>
         ))}

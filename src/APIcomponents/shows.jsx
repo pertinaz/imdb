@@ -25,6 +25,7 @@ const ShowsList = () => {
       <ul>
         {shows.map(show => (
           <li key={show.id}>
+            <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt={show.title} />
             <Link to={`/tv/${show.id}`}>{show.name}</Link>
           </li>
         ))}

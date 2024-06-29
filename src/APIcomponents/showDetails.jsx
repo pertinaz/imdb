@@ -26,6 +26,7 @@ const ShowDetail = () => {
 
   return (
     <div>
+      <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt={show.name} />
       <h2>{show.name}</h2>
       <p>Rating: {show.vote_average}</p>
       <p>Release Date: {show.first_air_date}</p>

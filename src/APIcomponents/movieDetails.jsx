@@ -26,6 +26,7 @@ const MovieDetail = () => {
 
   return (
     <div>
+      <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
       <h2>{movie.title}</h2>
       <p>Rating: {movie.vote_average}</p>
       <p>Release Date: {movie.release_date}</p>
