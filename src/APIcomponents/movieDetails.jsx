@@ -1,4 +1,4 @@
-
+import '../StyleComponents/details.css'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AxiosInstance from './AxiosInstance';
@@ -12,6 +12,7 @@ const MovieDetail = () => {
       try {
         const response = await AxiosInstance.get(`/movie/${id}`);
         setMovie(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error(`Error fetching movie details for id ${id}:`, error);
       }
@@ -25,7 +26,7 @@ const MovieDetail = () => {
   }
 
   return (
-    <div>
+    <div className='details'>
       <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
       <h2>{movie.title}</h2>
       <p>Rating: {movie.vote_average}</p>

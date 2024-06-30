@@ -1,7 +1,7 @@
-
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import AxiosInstance from './AxiosInstance';
+import "../StyleComponents/details.css";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import AxiosInstance from "./AxiosInstance";
 
 const PersonDetail = () => {
   const { id } = useParams();
@@ -25,8 +25,11 @@ const PersonDetail = () => {
   }
 
   return (
-    <div>
-      <img src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`} alt={person.name} />
+    <div className="details">
+      <img
+        src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`}
+        alt={person.name}
+      />
       <h2>{person.name}</h2>
       <p>Gender: {person.gender}</p>
       <p>Birthday: {person.birthday}</p>
