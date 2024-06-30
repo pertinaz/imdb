@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axiosInstance from './AxiosInstance';
+import AxiosInstance from './AxiosInstance';
 
 const ShowDetail = () => {
   const { id } = useParams();
@@ -10,7 +10,7 @@ const ShowDetail = () => {
   useEffect(() => {
     const fetchShowDetail = async () => {
       try {
-        const response = await axiosInstance.get(`/tv/${id}`);
+        const response = await AxiosInstance.get(`/tv/${id}`);
         setShow(response.data);
       } catch (error) {
         console.error(`Error fetching movie details for id ${id}:`, error);
@@ -26,6 +26,7 @@ const ShowDetail = () => {
 
   return (
     <div>
+      <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt={show.name} />
       <h2>{show.name}</h2>
       <p>Rating: {show.vote_average}</p>
       <p>Release Date: {show.first_air_date}</p>

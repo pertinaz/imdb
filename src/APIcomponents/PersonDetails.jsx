@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axiosInstance from './AxiosInstance';
+import AxiosInstance from './AxiosInstance';
 
 const PersonDetail = () => {
   const { id } = useParams();
@@ -10,7 +10,7 @@ const PersonDetail = () => {
   useEffect(() => {
     const fetchPersonDetail = async () => {
       try {
-        const response = await axiosInstance.get(`/person/${id}`);
+        const response = await AxiosInstance.get(`/person/${id}`);
         setPerson(response.data);
       } catch (error) {
         console.error(`Error fetching celebritie details for id ${id}:`, error);
@@ -26,6 +26,7 @@ const PersonDetail = () => {
 
   return (
     <div>
+      <img src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`} alt={person.name} />
       <h2>{person.name}</h2>
       <p>Gender: {person.gender}</p>
       <p>Birthday: {person.birthday}</p>

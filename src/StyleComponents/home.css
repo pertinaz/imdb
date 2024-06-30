@@ -20,6 +20,6 @@ body {
 .main-container{
     width: 100vw;
     height: 250px;
-    background-color: whitesmoke;
+    background-color: rgb(105, 105, 105);
     color: black;
 }

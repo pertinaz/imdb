@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from './AxiosInstance';
+import AxiosInstance from './AxiosInstance';
 
 const ShowsList = () => {
   const [shows, setShows] = useState([]);
@@ -9,7 +9,7 @@ const ShowsList = () => {
   useEffect(() => {
     const fetchShow = async () => {
       try {
-        const response = await axiosInstance.get('/tv/popular');
+        const response = await AxiosInstance.get('/tv/popular');
         setShows(response.data.results);
       } catch (error) {
         console.error('Error fetching tv show:', error);
@@ -25,6 +25,7 @@ const ShowsList = () => {
       <ul>
         {shows.map(show => (
           <li key={show.id}>
+            <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt={show.title} />
             <Link to={`/tv/${show.id}`}>{show.name}</Link>
           </li>
         ))}

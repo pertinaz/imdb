@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from './AxiosInstance';
+import AxiosInstance from './AxiosInstance';
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -9,7 +9,7 @@ const MovieList = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axiosInstance.get('/movie/popular');
+        const response = await AxiosInstance.get('/movie/popular');
         setMovies(response.data.results);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -25,6 +25,7 @@ const MovieList = () => {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
+            <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
             <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
           </li>
         ))}
